@@ -1,0 +1,22 @@
+body {
+    font-family: Arial, sans-serif;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .navbar {
+    background-color: #343a40;
+  }
+  
+  .navbar-brand, .navbar-nav .nav-link {
+    color: #ffffff;
+  }
+  
+  .navbar-brand:hover, .navbar-nav .nav-link:hover {
+    color: #ffffff;
+  }
+  
