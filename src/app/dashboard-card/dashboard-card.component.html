@@ -1,23 +1,21 @@
 <div style="background-color: white;">
-    <div class="preview-container">
+    <div class="summary-container">
         <h5>Summary</h5>
         <p>Click below to view detailed information.</p>
+        <p>
+            <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#dashboardCardCollapse1" aria-expanded="false" aria-controls="dashboardCardCollapse1">
+                Show Details
+            </button>
+        </p>
     </div>
-    <p>
-        <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#dashboardCardCollapse1" aria-expanded="false" aria-controls="dashboardCardCollapse1">
-            Show Details
-        </button>
-    </p>
     <div class="collapse" id="dashboardCardCollapse1">
         <div class="card card-body">
             <h5>Data Overview</h5>
             <p>This panel contains key data related to your website.</p>
-            <!-- Aquí puedes agregar los datos que deseas mostrar -->
             <ul>
                 <li>Number of visits: XX</li>
                 <li>Current visitors: XX</li>
                 <li>Server status: Online</li>
-                <!-- Otros datos -->
             </ul>
         </div>
     </div>
