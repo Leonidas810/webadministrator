@@ -1,15 +1,30 @@
-// Importa Express.js
-const express = require('express');
+const mongoose = require('mongoose');
 
-// Crea una instancia de Express
-const app = express();
-
-// Define una ruta básica
-app.get('/', (req, res) => {
-    res.send('¡Hola Mundo desde Express!');
+// Modelo de usuario
+const Usuario = mongoose.model('Usuario', {
+    nombre: String,
+    correo: String
 });
 
-// Escucha las solicitudes en el puerto 3000
-app.listen(3000, () => {
-    console.log('Servidor Express escuchando en el puerto 3000');
+// Conectar a la base de datos MongoDB
+mongoose.connect('mongodb://localhost:27017/tu_basededatos', {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+}).then(() => {
+    console.log('Conexión exitosa a la base de datos MongoDB');
+
+    // Crear un nuevo usuario
+    const nuevoUsuario = new Usuario({
+        nombre: 'John Doe',
+        correo: 'john@example.com'
+    });
+
+    // Guardar el nuevo usuario en la base de datos
+    nuevoUsuario.save().then(() => {
+        console.log('Nuevo usuario creado correctamente');
+    }).catch((error) => {
+        console.error('Error al crear nuevo usuario:', error);
+    });
+}).catch((error) => {
+    console.error('Error al conectar a la base de datos MongoDB:', error);
 });
