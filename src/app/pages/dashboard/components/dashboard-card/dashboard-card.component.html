@@ -1,0 +1,31 @@
+<div style="background-color: white;">
+    <div class="summary-container">
+        <h5>Summary</h5>
+        <p>Click below to view detailed information.</p>
+        <p>
+            <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#dashboardModal">
+                Show Details
+            </button>
+        </p>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="dashboardModal" tabindex="-1" aria-labelledby="dashboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="dashboardModalLabel">Dashboard Details</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>This panel contains key data related to your website.</p>
+                <ul>
+                    <li>Number of visits: XX</li>
+                    <li>Current visitors: XX</li>
+                    <li>Server status: Online</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
